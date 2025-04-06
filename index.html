@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Semke's Digital Media Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Gill Sans', sans-serif;
+      background-color: #f8fafc;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+      position: relative;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      margin-bottom: -1.7rem;
+      margin-left: 1.3rem;
+      position: relative;
+    }
+
+    .logo {
+      width: 160px;
+      height: 180px;
+      margin-right: -20px;
+      filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.1));
+      z-index: 2;
+    }
+
+    .name {
+      font-size: 6rem;
+      font-weight: bold;
+      color: #1f3b73;
+      margin-left: 10px;
+      transition: transform 0.3s ease;
+       text-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      position: relative;
+      z-index: 1;
+    }
+
+    .logo:hover + .name {
+      transform: translateX(40px);
+      scale: 1.05;
+    }
+
+    .main-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      background-color: #ffffff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      position: relative;
+    }
+
+    .intro-text {
+      width: 55%;
+    }
+
+    .intro-text p {
+      line-height: 1.6;
+    }
+
+    .artworks {
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .artwork {
+      background-color: #e7eef8;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      position: relative;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: background 0.3s ease;
+    }
+
+    .artwork:hover {
+      background-color: #97c5e4;
+    }
+
+    .art-image {
+      position: absolute;
+      left: -345px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 320px;
+      height: auto;
+      display: none;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      z-index: 2
+    }
+
+    .artwork:hover .art-image {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .circle-container {
+      position: absolute;
+      bottom: -40px;
+      left: 30px;
+      display: flex;
+      gap: 1rem;
+    }
+
+    .circle {
+      width: 60px;
+      height: 60px;
+      margin-top: -20px;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      position: relative;
+      cursor: pointer;
+    }
+    
+    .circle.large {
+      background-color: #97c5e4; /* light blue */
+    }
+
+    .circle.small {
+      background-color: #1f3b73; /* dark blue */
+      width: 40px;
+      height: 40px
+    }
+
+    .popup-text {
+      position: absolute;
+      top: 70px;
+      left: 0;
+      background-color: #fff;
+      padding: 1rem;
+      border-radius: 10px;
+      width: 300px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      display: none;
+      animation: fadeIn 0.3s ease;
+      z-index: 3;
+    }
+
+    .circle:hover .popup-text {
+      display: block;
+    } 
+  </style>
+    </head>
+    <body>
+      <div class="container">
+        <header>
+          <img src="semkelogo-clip.png" alt="Logo" class="logo" />
+          <div class="name">Semke!</div>
+        </header>
+
+    <div class="main-box">
+      <div class="intro-text">
+        <p><strong>Hi, I'm Semke!</strong> I'm currently a freshman at <a href="https://www.erhsnyc.org/">Eleanor Roosevelt High School</a> in New York City (born 'n raised!). Some of my interests include fashion, math, biking, and learning to code great websites. On this website I created, you can look through some of my works from my Digital Media class taught by the coolest <a href="https://www.erhsnyc.org/apps/pages/index.jsp?uREC_ID=1399112&type=u">Mr. Zeng!</a> Hover over the buttons you see on the right and the circles below to find out more!</p>
+      </div>
+      <div class="artworks">
+        <div class="artwork">Moodboard
+          <img class="art-image" src="Rhode Highlighter Moodboard.png" alt="Moodboard">
+        </div>
+        <div class="artwork">Self Portrait Collage
+          <img class="art-image" src="self portrait collage.png" alt="Self Portrait">
+        </div>
+        <div class="artwork">Scavenger Hunt Photography Collage
+          <img class="art-image" src="Scavenger HuntInstagram Collage.jpg" alt="Scavenger Hunt">
+        </div>
+        <div class="artwork">Visual Storytelling Photography
+          <img class="art-image" src="photo2.jpg" alt="Visual Storytelling">
+        </div>
+        <div class="artwork">Rule of Thirds Photography
+          <img class="art-image" src="IMG_3193.JPG" alt="Rule of Thirds">
+        </div>
+      </div>
+
+      <div class="circle-container">
+        <div class="circle large">
+          <div class="popup-text">
+            <strong>Reflection:</strong>
+            <p>This year in Digital Media, I’ve learned and grown a lot by exploring many different tools and skills. I've become familiar using the cameras and practicing photography. I've also developed my editing skills with Photoshop, Illustrator, and Canva. I have built websites and experimented with code on programs such as Replit and Dreamweaver, which took a lot of trial and error but felt rewarding to figure out. Overall, this class has given me the chance to experiment with new tools and express myself through many different projects.</p>
+          </div>
+        </div>
+        <div class="circle small">
+          <div class="popup-text">
+            <p>Thank you for visiting my portfolio page!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
